@@ -42,7 +42,7 @@ const Search = ()=>{
             setCurrentPage(0)
         }
         var url = "/store/search/page/" + currentPage
-        axios.post(url,jobj).then(
+        axios.get(url,jobj).then(
             (response) => {
 
                 setStores(response.data.data.content)

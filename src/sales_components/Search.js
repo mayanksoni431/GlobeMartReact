@@ -126,7 +126,7 @@ const Search = ()=>{
             jobj["storeNo"] = stn
         }
         var url = "/sales/search/page/"+pg
-        axios.post(url, jobj)
+        axios.get(url, jobj)
             .then(
                 (response) => {
                     setSales(response.data.data.content)
